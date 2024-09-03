@@ -4,43 +4,34 @@ import java.util.ArrayList;
 
 public class BeerExpert {
 
-    private final ArrayList<String> lightBeers;
-    private final ArrayList<String> amberBeers;
-    private final ArrayList<String> brownBeers;
-    private final ArrayList<String> darkBeers;
+    private final ArrayList<String> beers;
 
     public BeerExpert() {
-        amberBeers = new ArrayList<>();
-        amberBeers.add("Three Floyds Amber Smashed Face");
-        amberBeers.add("Bird De Rumoerige Roodborst");
-        amberBeers.add("Uiltje Mr Feathers");
-
-        brownBeers = new ArrayList<>();
-        brownBeers.add("Pit Caribou Brown Ale Américaine");
-        brownBeers.add("Cigar City Cubano-Style Espresso Brown Ale");
-        brownBeers.add("Surly Cacao Bender");
-
-        darkBeers = new ArrayList<>();
-        darkBeers.add("Pig Porter");
-        darkBeers.add("Marshal Zukhov's Imperial Stout");
-        darkBeers.add("Monk's Cafe Flemish Sour Ale");
-
-        lightBeers = new ArrayList<>();
-        lightBeers.add("Coors Light");
-        lightBeers.add("Michelob Ultra");
-        lightBeers.add("Natural Light");
+        beers = new ArrayList<>();
     }
 
     public ArrayList<String> getBrands(int idBeerType){
         switch (idBeerType){
-            case 0:
-                return lightBeers;
-            case 1:
-                return amberBeers;
-            case 2:
-                return brownBeers;
-            case 3:
-                return darkBeers;
+            case 0://light
+                beers.add("Coors Light");
+                beers.add("Michelob Ultra");
+                beers.add("Natural Light");
+                return beers;
+            case 1://amber
+                beers.add("Three Floyds Amber Smashed Face");
+                beers.add("Bird De Rumoerige Roodborst");
+                beers.add("Uiltje Mr Feathers");
+                return beers;
+            case 2://brown
+                beers.add("Pit Caribou Brown Ale Américaine");
+                beers.add("Cigar City Cubano-Style Espresso Brown Ale");
+                beers.add("Surly Cacao Bender");
+                return beers;
+            case 3://dark
+                beers.add("Pig Porter");
+                beers.add("Marshal Zukhov's Imperial Stout");
+                beers.add("Monk's Cafe Flemish Sour Ale");
+                return beers;
         }
         return null;
     }
